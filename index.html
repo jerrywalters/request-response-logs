@@ -7,39 +7,41 @@
   </head>
   <body>
     <header>
-      <div>
-        logo
-      </div>
     </header>
-    <main class="dashboard">
-      <div class="dashboard-container">
-        <aside class="dashboard__nav">
+    <main class="account">
+      <div class="account-container">
+        <aside class="account__nav">
           <ul>
             <li>My Apps</li>
             <li>Register an App</li>
           </ul>
         </aside>
-        <section class="logs dashboard-content">
-          <div class="logs__header">
-            <h1>Logs</h1>
+        <section class="account-content">
+          <div class="logs-header">
+            <h1 class="logs-header__heading">appName Logs</h1>
           </div>
-          <div class="logs__filter">
-
+          <div class="logs-filter">
+            <div class="filter-header">
+              <p class="filter-header__toggle">filter</p>
+            </div>
           </div>
-          <div class="logs__list-container">
-            <ul class="logs__list">
+          <div class="logs">
+            <ul class="logs-list">
               <li class="log-single">
                 <ul class="log-info">
-                  <li class="log-info__item">GET</li>
+                  <li class="log-info__item--req">GET</li>
                   <li class="log-info__item">200</li>
                   <li class="log-info__item">137ms</li>
                   <li class="log-info__item">01/01/01 00:00:00</li>
                   <li class="log-info__item">share</li>
                 </ul>
+                <!-- <div class="log-body">
+
+                </div> -->
               </li>
               <li class="log-single">
                 <ul class="log-info">
-                  <li class="log-info__item">GET</li>
+                  <li class="log-info__item--req">GET</li>
                   <li class="log-info__item">200</li>
                   <li class="log-info__item">137ms</li>
                   <li class="log-info__item">01/01/01 00:00:00</li>

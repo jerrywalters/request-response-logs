@@ -55,42 +55,72 @@ header {
   height: 84px;
   background-color: #25313d;
 }
-.dashboard {
+.account {
   background-color: #1a2730;
 }
 
-/* Dashboard */
-.dashboard-container {
+/* Account */
+.account-container {
   margin: 0 60px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
-.dashboard-content {
-  width: 65%;
+.account-content {
+  width: 100%;
   background-color: #fafafa ;
 }
 
-/* Dashboard Navigation */
-.dashboard__nav {
-  width: 15%;
+/* Account Navigation */
+.account__nav {
+  width: 20%;
   background-color:#2C3943;
 }
 
+/* Logs Header */
+.logs-header {
+	padding: 1rem;
+}
+.logs-header__heading {
+	font-size: 3em;
+}
+
+/* filter */
+.logs-filter {
+	background-color: #25313D;
+}
+.filter-header {
+	width: 100%;
+	padding: 1rem;
+}
+.filter-header__toggle {
+	color: #fff;
+}
+
 /* Log List */
+.logs {
+	padding: 1rem;
+}
 .logs-list {
-  display: flex;
-  flex-direction: row;
+
 }
 .log-single {
-  
+	width: 100%;
+	padding: 1.5rem 0;
+	border-bottom: 1px solid #ccc;
 }
 .log-info {
   display: flex;
   flex-direction: row;
 }
+.log-body {
+	display: block;
+}
 .log-info__item {
-
+	padding: 0 2rem;
+}
+.log-info__item--req {
+	flex-grow: 2;
 }
 
 /* Footer */
@@ -99,7 +129,7 @@ header {
 }
 .footer__primary {
   background-color: #2c3943;
-  height: 289px;
+  height: 250px;
   }
 .footer__secondary {
   background-color:#1a2730;
