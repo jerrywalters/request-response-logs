@@ -120,11 +120,12 @@ header {
 
 }
 .filter-header {
-	padding: 1.5rem 2rem;
+	padding: 1.25rem 2rem;
 	background-color: #374855;
 }
-.filter-header__toggle {
+.filter__toggle {
 	color: #fff;
+	font-size: 1em;
 }
 .filter-content {
 	padding: 2rem 2rem 4rem 3rem;
