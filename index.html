@@ -2,7 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
     <title>Logs</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -10,10 +13,10 @@
     </header>
     <main class="account">
       <div class="account-container">
-        <aside class="account__nav">
-          <ul>
-            <li>My Apps</li>
-            <li>Register an App</li>
+        <aside class="account__sidebar">
+          <ul class="account-nav">
+            <li class="account-nav__item">My Apps</li>
+            <li class="account-nav__item">Register an App</li>
           </ul>
         </aside>
         <section class="account-content">
@@ -23,11 +26,102 @@
           </div>
           <div class="logs-filter">
             <div class="filter-header">
-              <p class="filter-header__toggle">filter</p>
+              <p class="filter-header__toggle">Filter</p>
+            </div>
+            <div class="filter-content">
+              <div class="filter-section">
+                <h3 class="filter-section__header">Choose Dates</h3>
+                <ul class="filter-options">
+                  <li class="filter-options__single">
+                    <p class="datepicker-heading">Between:</p>
+                    <input type="text" class="datepicker">
+                  </li>
+                  <li class="filter-options__single">
+                    <p class="datepicker-heading">and</p>
+                    <input type="text" class="datepicker">
+                  </li>
+                </ul>
+              </div>
+              <div class="filter-section">
+                <h3 class="filter-section__header">HTTP Status</h3>
+                <ul class="filter-options">
+                  <li class="filter-options__single">
+                    200
+                  </li>
+                  <li class="filter-options__single">
+                    300
+                  </li>
+                  <li class="filter-options__single">
+                    400
+                  </li>
+                </ul>
+              </div>
+              <div class="filter-section">
+                <h3 class="filter-section__header">HTTP Method</h3>
+                <ul class="filter-options">
+                  <li class="filter-options__single">
+                    GET
+                  </li>
+                  <li class="filter-options__single">
+                    POST
+                  </li>
+                  <li class="filter-options__single">
+                    PUT
+                  </li>
+                  <li class="filter-options__single">
+                    DELETE
+                  </li>
+                </ul>
+              </div>
+              <div class="filter-section">
+                <h3 class="filter-section__header">API Endpoint</h3>
+                <ul class="filter-options">
+                  <li class="filter-options__single">
+                    /rewards/etc/etc/etc
+                  </li>
+                  <li class="filter-options__single">
+                    /rewards/accounts
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="logs">
-            <ul class="logs-list">
+            <div class="guide">
+              <div class="guide__nums">
+                7 Logs for
+              </div>
+              <ul class="active-filters">
+                <li class="active-filters__filter"><button>selected filter x</button></li>
+                <li class="active-filters__filter"><button>selected filter x</button></li>
+              </ul>
+            </div>
+            <ul class="log-list">
+              <li class="log-single">
+                <ul class="log-info">
+                  <li class="log-info__item--req">GET /rewards/accounts/path</li>
+                  <li class="log-info__item">200</li>
+                  <li class="log-info__item">137ms</li>
+                  <li class="log-info__item">01/01/01 00:00:00</li>
+                  <li class="log-info__item">share</li>
+                </ul>
+                <div class="log-body">
+                  <section class="log-body__tab log-body__tab--selected">
+                      <h3 class="tab__heading">
+                        Request Header
+                      </h3>
+                      <p class="tab__content">
+                        {'boolean': true, 'six': 6}
+                      </p>
+                      <h3 class="tab__heading">
+                        Request Body
+                      </h3>
+                      <p class="tab__content">
+                        {'boolean': true, 'six': 6}
+                      </p>
+                  </section>
+                </div>
+              </li>
               <li class="log-single">
                 <ul class="log-info">
                   <li class="log-info__item--req">GET</li>
@@ -36,9 +130,15 @@
                   <li class="log-info__item">01/01/01 00:00:00</li>
                   <li class="log-info__item">share</li>
                 </ul>
-                <!-- <div class="log-body">
-
-                </div> -->
+              </li>
+              <li class="log-single">
+                <ul class="log-info">
+                  <li class="log-info__item--req">GET</li>
+                  <li class="log-info__item">200</li>
+                  <li class="log-info__item">137ms</li>
+                  <li class="log-info__item">01/01/01 00:00:00</li>
+                  <li class="log-info__item">share</li>
+                </ul>
               </li>
               <li class="log-single">
                 <ul class="log-info">
@@ -68,6 +168,18 @@
                 </ul>
               </li>
             </ul>
+            <div class="pagination">
+              <button class="pagination__prev">Previous</button>
+              <div class="pagination__container">
+                <ul class="page-numbers">
+                  <li class="page-numbers__number">1</li>
+                  <li class="page-numbers__number">2</li>
+                  <li class="page-numbers__number">3</li>
+
+                </ul>
+              </div>
+              <button class="pagination__next">Next</button>
+            </div>
           </div>
         </section>
       </div>
@@ -80,6 +192,10 @@
 
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+    </script>
   </body>
 </html>

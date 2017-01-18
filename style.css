@@ -57,14 +57,19 @@ header {
 }
 .account {
   background-color: #1a2730;
+	font-family: 'ProximaNovaLight', Arial, sans-serif;
 }
 
 /* Account */
 .account-container {
   margin: 0 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+}
+@media screen and (min-width: 1200px){
+	.account-container {
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: flex-start;
+	}
 }
 .account-content {
   width: 100%;
@@ -72,55 +77,166 @@ header {
 }
 
 /* Account Navigation */
-.account__nav {
-  width: 20%;
-  background-color:#2C3943;
+@media screen and (min-width: 1200px) {
+	.account__sidebar {
+	  width: 20%;
+	}
+	.account-nav {
+		display: block;
+	}
 }
+.account__sidebar {
+	background-color:#2C3943;
+	padding: 2rem 0 2rem 1.5rem;
+}
+.account-nav {
+	/*display: flex;*/
+}
+.account-nav__item {
+	color: #0cace0;
+	line-height: 2;
+}
+
 
 /* Logs Header */
 .logs-header {
-	padding: 1rem;
+	padding: 2rem;
+}
+.logs-header__link {
+	margin-bottom: 1.5rem;
+	color: #2078BB;
+	display: block;
+	text-decoration: none;
 }
 .logs-header__heading {
-	font-size: 3em;
+	font-family: 'ProximaNovaLight', Helvetica, sans-serif;
+	font-size: 4em;
+	/*font-weight: 200;*/
+	color: #333;
 }
 
 /* filter */
 .logs-filter {
-	background-color: #25313D;
+
 }
 .filter-header {
-	width: 100%;
-	padding: 1rem;
+	padding: 1.5rem 2rem;
+	background-color: #374855;
 }
 .filter-header__toggle {
 	color: #fff;
 }
+.filter-content {
+	padding: 2rem 2rem 4rem 3rem;
+	display: flex;
+	background-color: #374855;
+	opacity: .85;
+}
+.filter-options__single {
+	font-family: 'ProximaNovaLight', Helvetica, sans-serif;
+	font-size: .8em;
+	color: #C8C8C8;
+	padding: .2rem 0rem;
+	margin-bottom: .4rem;
+}
+.filter-section {
+	width: 20%;
+	margin-right: 2rem;
+}
+.filter-section__header {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 1rem;
+	padding-bottom: .7rem;
+	color: #fff;
+}
+.datepicker-heading {
+	margin-bottom: .5rem;
+}
+
+/* Selected Filters */
+.guide {
+	/*border-bottom: 1px solid #ccc;*/
+	margin: 1rem 0;
+	padding: 0 .5rem;
+	display: flex;
+}
+.guide__nums {
+	margin-right: .5rem;
+}
+.active-filters {
+	display: flex;
+}
+.active-filters__filter {
+	margin-right: .5rem;
+}
 
 /* Log List */
 .logs {
-	padding: 1rem;
+	padding: 0 2rem;
 }
-.logs-list {
-
+.log-list {
+	border-top: 1px solid #ccc;
+	margin-bottom: 2rem;
 }
 .log-single {
 	width: 100%;
-	padding: 1.5rem 0;
 	border-bottom: 1px solid #ccc;
 }
 .log-info {
   display: flex;
   flex-direction: row;
-}
-.log-body {
-	display: block;
+	padding: 2rem 0;
+
 }
 .log-info__item {
 	padding: 0 2rem;
 }
 .log-info__item--req {
 	flex-grow: 2;
+}
+
+/* Log Tabs */
+.log-body--hidden {
+	display: none;
+}
+.log-body {
+	margin: .7rem 0;
+}
+
+.log-body__tab {
+	background-color: #ededed;
+	padding: 2rem 1rem;
+	border: 1px solid #ccc;
+}
+.tab__heading {
+	font-family: 'ProximaNovaLight', Helvetica, sans-serif;
+	font-size: 1.2em;
+	color: #666;
+	margin-bottom: 1rem;
+}
+.tab__content {
+	line-height: 1.5rem;
+	margin-bottom: 1rem;
+}
+.pagination {
+	margin-bottom: 1.75rem;
+	display: flex;
+}
+.pagination__container {
+	flex-grow: 2;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.page-numbers {
+	display: flex;
+}
+.page-numbers__number {
+	margin-left: .5rem;
+}
+.pagination__prev {
+}
+.pagination__next {
 }
 
 /* Footer */
@@ -134,4 +250,77 @@ header {
 .footer__secondary {
   background-color:#1a2730;
   height: 58px;
+}
+
+/* Fonts ------------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url('fonts/proximanova-bold-webfont.eot');
+    src: url('fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-bold-webfont.woff') format('woff'),
+         url('fonts/proximanova-bold-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-bold-webfont.svg#ProximaNovaBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNovaLight';
+    src: url('fonts/proximanova-light-webfont.eot');
+    src: url('fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-light-webfont.woff') format('woff'),
+         url('fonts/proximanova-light-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-light-webfont.svg#ProximaNovaLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNovaLightItalic';
+    src: url('fonts/proximanova-lightitalic-webfont.eot');
+    src: url('fonts/proximanova-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-lightitalic-webfont.woff') format('woff'),
+         url('fonts/proximanova-lightitalic-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-lightitalic-webfont.svg#ProximaNovaLightItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url('fonts/proximanova-regular-webfont.eot');
+    src: url('fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-regular-webfont.woff') format('woff'),
+         url('fonts/proximanova-regular-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-regular-webfont.svg#ProximaNovaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNovaRegularItalic';
+    src: url('fonts/proximanova-regularitalic-webfont.eot');
+    src: url('fonts/proximanova-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-regularitalic-webfont.woff') format('woff'),
+         url('fonts/proximanova-regularitalic-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-regularitalic-webfont.svg#ProximaNovaRegularItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNovaSemibold';
+    src: url('fonts/proximanova-semibold-webfont.eot');
+    src: url('fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-semibold-webfont.woff') format('woff'),
+         url('fonts/proximanova-semibold-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-semibold-webfont.svg#ProximaNovaSemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNovaSemiboldItalic';
+    src: url('fonts/proximanova-semibolditalic-webfont.eot');
+    src: url('fonts/proximanova-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-semibolditalic-webfont.woff') format('woff'),
+         url('fonts/proximanova-semibolditalic-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-semibolditalic-webfont.svg#ProximaNovaSemiboldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
