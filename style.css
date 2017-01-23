@@ -117,7 +117,7 @@ header {
 
 /* filter */
 .logs-filter {
-
+	position: relative;
 }
 .filter-header {
 	padding: 1.25rem 2rem;
@@ -127,11 +127,16 @@ header {
 	color: #fff;
 	font-size: 1em;
 }
+
+/* somehow left 0 right 0 makes this thing the width of the relative parent element */
 .filter-content {
 	padding: 2rem 2rem 4rem 3rem;
 	display: flex;
 	background-color: #374855;
 	opacity: .85;
+	position: absolute;
+	left: 0;
+	right: 0;
 }
 .filter-options__single {
 	font-family: 'ProximaNovaLight', Helvetica, sans-serif;
@@ -139,6 +144,23 @@ header {
 	color: #C8C8C8;
 	padding: .2rem 0rem;
 	margin-bottom: .4rem;
+}
+.filter-options__single:hover {
+	cursor: pointer;
+}
+.filter-options__single--selected {
+	color: #fff;
+	position: relative;
+}
+.filter-options__single--selected::before {
+	content: '';
+	width: 8px;
+	height: 8px;
+	background-color: #0cace0;
+	border-radius: 4px;
+	position: absolute;
+	top: 4px;
+	left: -15px;
 }
 .filter-section {
 	width: 20%;
