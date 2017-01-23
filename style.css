@@ -127,6 +127,8 @@ header {
 	color: #fff;
 	font-size: 1em;
 }
+.filter__toggle:hover {
+	cursor: pointer;}
 
 /* somehow left 0 right 0 makes this thing the width of the relative parent element */
 .filter-content {
@@ -138,7 +140,10 @@ header {
 	left: 0;
 	right: 0;
 }
-.filter-options__single {
+.filter-content--hidden {
+	display: none;
+}
+.filter-options__single, .filter-options__text {
 	font-family: 'ProximaNovaLight', Helvetica, sans-serif;
 	font-size: .8em;
 	color: #C8C8C8;
@@ -209,7 +214,12 @@ header {
   display: flex;
   flex-direction: row;
 	padding: 2rem 0;
-
+}
+.log-info__toggle {
+	margin-right: 1rem;
+}
+.log-info__toggle:hover {
+	cursor: pointer;
 }
 .log-info__item {
 	padding: 0 2rem;
@@ -230,6 +240,16 @@ header {
 	background-color: #ededed;
 	padding: 2rem 1rem;
 	border: 1px solid #ccc;
+}
+/*.log-body__tab--selected {
+	display: block;
+}*/
+.log-tabs {
+	display: flex;
+}
+.log-tabs__tab {
+	padding: 1rem;
+	background-color: #ededed;
 }
 .tab__heading {
 	font-family: 'ProximaNovaLight', Helvetica, sans-serif;
