@@ -187,15 +187,37 @@ header {
 	margin: 1rem 0;
 	padding: 0 .5rem;
 	display: flex;
+	font-family: 'ProximaNovaLight', Helvetica, sans-serif;
+	font-size: .9em;
 }
 .guide__nums {
 	margin-right: .5rem;
+	display: flex;
+	align-items: center;
 }
 .active-filters {
 	display: flex;
 }
 .active-filters__filter {
 	margin-right: .5rem;
+}
+.filter-button {
+	font-family: 'ProximaNovaLight', Helvetica, sans-serif;
+	padding: .5rem;
+	text-decoration: none;
+	color: #000;
+	background-color: #f0f0f0;
+	border-radius: 4px;
+	line-height: 1em;
+	font-size: 1em;
+	border: none;
+	cursor: pointer;
+}
+.filter-button::after {
+	content: 'x';
+	font-size: 1.3em;
+	color: #D03027;
+	margin-left: .5rem;
 }
 
 /* Log List */
@@ -234,6 +256,7 @@ header {
 }
 .log-body {
 	margin: .7rem 0;
+	padding-left: 1rem;
 }
 
 .log-body__tab {
@@ -249,12 +272,33 @@ header {
 }
 .log-tabs__tab {
 	padding: 1rem;
+	background-color: #fafafa;
+}
+.log-tabs__tab--active {
 	background-color: #ededed;
+	border: solid 1px #ccc;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom: none;
+	position: relative;
+}
+.log-tabs__tab--active::after {
+	background-color: #ededed;
+	width: 100%;
+	content: ' ';
+	height: 2px;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+}
+.log-tabs__link {
+	text-decoration: none;
+	color: #000;
 }
 .tab__heading {
 	font-family: 'ProximaNovaLight', Helvetica, sans-serif;
-	font-size: 1.2em;
-	color: #666;
+	font-size: 1.1em;
+	color: #999;
 	margin-bottom: 1rem;
 }
 .tab__content {
@@ -273,13 +317,28 @@ header {
 }
 .page-numbers {
 	display: flex;
+	align-items: center;
 }
 .page-numbers__number {
 	margin-left: .5rem;
 }
-.pagination__prev {
+.pagination__button {
+	font-family: 'ProximaNovaLight', Helvetica, sans-serif;
+	font-size: 1em;
+	text-decoration: none;
+	color: #018BBB;
+	border: 2px solid #018BBB;
+	background-color: #fafafa;
+	padding: .75rem 1rem;
+	border-radius: 4px;
 }
-.pagination__next {
+.pagination__button--next::after {
+	content: '>';
+	margin-left: .5rem;
+}
+.pagination__button--prev::before {
+	content: '<';
+	margin-right: .5rem;
 }
 
 /* Footer */
