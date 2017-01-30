@@ -90,13 +90,22 @@ header {
 	padding: 2rem 0 2rem 1.5rem;
 }
 .account-nav {
-	/*display: flex;*/
+	display: flex;
 }
 .account-nav__item {
-	color: #0cace0;
 	line-height: 2;
+	margin-right: 1.2rem;	
 }
-
+@media screen and (min-width: 1200px) {
+	.account-nav {
+		flex-direction: column;
+	}
+}
+.account-nav__link {
+	text-decoration: none;
+	color: #0cace0;
+	cursor: pointer;
+}
 
 /* Logs Header */
 .logs-header {
@@ -108,10 +117,15 @@ header {
 	display: block;
 	text-decoration: none;
 }
+.logs-header__link::before {
+	content: url('img/icons/arrow-back.svg');
+	margin-right: .3rem;
+	vertical-align: middle;
+}
 .logs-header__heading {
-	font-family: 'ProximaNovaLight', Helvetica, sans-serif;
+	font-family: 'ProximaNovaThin', Helvetica, sans-serif;
 	font-size: 4em;
-	/*font-weight: 200;*/
+	font-weight: 200;
 	color: #333;
 }
 
@@ -124,8 +138,18 @@ header {
 	background-color: #374855;
 }
 .filter__toggle {
+	font-family: 'ProximaNovaLight', Helvetica, sans-serif;
 	color: #fff;
 	font-size: 1em;
+	border: none;
+	text-decoration: none;
+	background-color: #374855;
+}
+
+.filter__icon {
+	content: url('img/icons/arrow-down-white.svg');
+	margin-left: .2rem;
+	color: #fff;
 }
 .filter__toggle:hover {
 	cursor: pointer;}
@@ -139,6 +163,7 @@ header {
 	position: absolute;
 	left: 0;
 	right: 0;
+	z-index: 9;	
 }
 .filter-content--hidden {
 	display: none;
@@ -219,10 +244,9 @@ header {
 	color: #D03027;
 	margin-left: .5rem;
 }
-
 /* Log List */
 .logs {
-	padding: 0 2rem;
+	padding: 0 2rem 1rem 2rem;
 }
 .log-list {
 	border-top: 1px solid #ccc;
@@ -235,19 +259,66 @@ header {
 .log-info {
   display: flex;
   flex-direction: row;
-	padding: 2rem 0;
+  padding: 2rem 0;
+  align-items: center;
+}
+.log-info__item {
+	padding: 0 .5rem;
+	position: relative;
+	font-size: .9em;	
+}
+.log-info__toggle {
+		content: url('img/icons/arrow-right.svg');
+	margin-left: .2rem;
+}
+.log-info__item--req {
+	flex-grow: 2;
+	padding-left: .5rem;
+}
+.log-info__item--dl {
+	content: url('img/icons/download.svg');
+	cursor: pointer;
+	padding: 0 .5rem;
+}
+.log-info__item::before  {
+	content: ' ';
+	height: 10px;
+	width: 10px; 
+	border-radius: 5px;
+	position: absolute;
+	left: 16px;
+	top: 25px
+}
+@media screen and (min-width: 850px) {
+	.log-info__item {
+		padding: 0 2rem;
+		font-size: 1em;
+	}
+	.log-info__item--req {
+		padding-left: .5rem;
+	}
+	.log-info__item::before  {
+		left: 16px;
+		top: 2px
+	}
+	.log-info__item--dl {
+		padding: 0 .5em;
+	}
+}
+.log-info__item--200::before {
+	background-color: #128020;
+}
+.log-info__item--300::before {
+	background-color: #e8ce4d;
+}
+.log-info__item--400::before {
+	background-color: #d03027;
 }
 .log-info__toggle {
 	margin-right: 1rem;
 }
 .log-info__toggle:hover {
 	cursor: pointer;
-}
-.log-info__item {
-	padding: 0 2rem;
-}
-.log-info__item--req {
-	flex-grow: 2;
 }
 
 /* Log Tabs */
@@ -291,8 +362,13 @@ header {
 	bottom: -2px;
 	left: 0;
 }
+
+/* BEM sin */
 .log-tabs__link {
 	text-decoration: none;
+	color: #2078BB;
+}
+.log-tabs__tab--active .log-tabs__link {
 	color: #000;
 }
 .tab__heading {
@@ -320,7 +396,15 @@ header {
 	align-items: center;
 }
 .page-numbers__number {
-	margin-left: .5rem;
+	margin-left: .25rem;
+	padding: .3rem .8rem;
+	font-size: .8em;
+
+}
+.page-numbers__number--selected {
+	background-color: #374855;
+	color: #fff;
+	border-radius: 4px;
 }
 .pagination__button {
 	font-family: 'ProximaNovaLight', Helvetica, sans-serif;
@@ -331,6 +415,7 @@ header {
 	background-color: #fafafa;
 	padding: .75rem 1rem;
 	border-radius: 4px;
+	cursor: pointer;
 }
 .pagination__button--next::after {
 	content: '>';
@@ -368,13 +453,27 @@ header {
 }
 @font-face {
     font-family: 'ProximaNovaLight';
-    src: url('fonts/proximanova-light-webfont.eot');
-    src: url('fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/proximanova-light-webfont.woff') format('woff'),
-         url('fonts/proximanova-light-webfont.ttf') format('truetype'),
-         url('fonts/proximanova-light-webfont.svg#ProximaNovaLight') format('svg');
+    src: url('fonts/ProximaNova-Light-webfont.eot');
+    src: url('fonts/ProximaNova-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ProximaNova-Light-webfont.woff2') format('woff2'),
+         url('fonts/ProximaNova-Light-webfont.woff') format('woff'),
+         url('fonts/ProximaNova-Light-webfont.ttf') format('truetype'),
+         url('fonts/ProximaNova-Light-webfont.svg#proxima_nova_ltlight') format('svg');
     font-weight: normal;
     font-style: normal;
+
+}
+@font-face {
+    font-family: 'ProximaNovaThin';
+    src: url('fonts/ProximaNova-Thin-webfont.eot');
+    src: url('fonts/ProximaNova-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ProximaNova-Thin-webfont.woff2') format('woff2'),
+         url('fonts/ProximaNova-Thin-webfont.woff') format('woff'),
+         url('fonts/ProximaNova-Thin-webfont.ttf') format('truetype'),
+         url('fonts/ProximaNova-Thin-webfont.svg#proxima_nova_ththin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 @font-face {
     font-family: 'ProximaNovaLightItalic';
@@ -388,13 +487,15 @@ header {
 }
 @font-face {
     font-family: 'ProximaNovaRegular';
-    src: url('fonts/proximanova-regular-webfont.eot');
-    src: url('fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/proximanova-regular-webfont.woff') format('woff'),
-         url('fonts/proximanova-regular-webfont.ttf') format('truetype'),
-         url('fonts/proximanova-regular-webfont.svg#ProximaNovaRegular') format('svg');
+    src: url('fonts/ProximaNova-Reg-webfont.eot');
+    src: url('fonts/ProximaNova-Reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ProximaNova-Reg-webfont.woff2') format('woff2'),
+         url('fonts/ProximaNova-Reg-webfont.woff') format('woff'),
+         url('fonts/ProximaNova-Reg-webfont.ttf') format('truetype'),
+         url('fonts/ProximaNova-Reg-webfont.svg#proxima_nova_rgregular') format('svg');
     font-weight: normal;
     font-style: normal;
+
 }
 @font-face {
     font-family: 'ProximaNovaRegularItalic';
@@ -425,4 +526,16 @@ header {
          url('fonts/proximanova-semibolditalic-webfont.svg#ProximaNovaSemiboldItalic') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+@font-face {
+    font-family: 'proxima_nova_ththin';
+    src: url('ProximaNova-Thin-webfont.eot');
+    src: url('ProximaNova-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ProximaNova-Thin-webfont.woff2') format('woff2'),
+         url('ProximaNova-Thin-webfont.woff') format('woff'),
+         url('ProximaNova-Thin-webfont.ttf') format('truetype'),
+         url('ProximaNova-Thin-webfont.svg#proxima_nova_ththin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }

@@ -1,9 +1,15 @@
 $(function() {
+  
     console.log( "ready!" );
 
     // toggle Filters
     $('.filter__toggle').click(function() {
       $('.filter-content').toggleClass('filter-content--hidden');
+      if (  $( this ).children().css( "transform" ) == 'none' ){
+        $(this).children().css("transform","rotate(270deg)");
+      } else {
+        $(this).children().css("transform","" );
+     }
     })
 
     $('.filter-options__single').click(function() {
@@ -12,6 +18,11 @@ $(function() {
 
     $('.log-info__toggle').click(function() {
       $(this).parent().siblings('.log-body').toggleClass('log-body--hidden');
+      if (  $( this ).css( "transform" ) == 'none' ){
+        $(this).css("transform","rotate(90deg)");
+      } else {
+        $(this).css("transform","" );
+     }
     })
 
     $('.log-tabs').each(function() {
@@ -19,9 +30,9 @@ $(function() {
 
       // If the location.hash matches one of the links, use that as the active tab.
       // If no match is found, use the first link as the initial active tab.
-      $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+      $active = $($links.filter()[0] || $links[0]);
       $active.parent().addClass('log-tabs__tab--active');
-      console.log($($active[0].hash))
+      console.log($($active[0]))
       $content = $($active[0].hash);
 
       // Hide the remaining content

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="14px" viewBox="0 0 24 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/stroked/arrow-down</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Inventory" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-405.000000, -31.000000)" fill="#0D161D">
+            <g id="outline" sketch:type="MSLayerGroup" transform="translate(24.000000, 25.000000)">
+                <g id="icons/stroked/arrow-down" transform="translate(381.000000, 6.000000)" sketch:type="MSShapeGroup">
+                    <path d="M11.7355,13.7340833 C11.5955,13.7340833 11.4635,13.6755623 11.369,13.5725253 L0.417,1.61073178 C0.2315,1.40765889 0.245,1.0920456 0.447,0.905978815 C0.6495,0.721912747 0.9645,0.733917056 1.15,0.936989946 L11.7355,12.4981397 L22.321,0.936989946 C22.508,0.733917056 22.8235,0.721912747 23.024,0.905978815 C23.2265,1.0920456 23.24,1.40765889 23.0545,1.61073178 L12.102,13.5725253 C12.008,13.6755623 11.8755,13.7340833 11.7355,13.7340833"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

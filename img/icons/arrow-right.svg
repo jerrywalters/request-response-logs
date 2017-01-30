@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow-right" fill="#0D161D">
+            <g id="Inventory">
+                <g id="Icons">
+                    <g id="outline">
+                        <g id="icons/stroked/arrow-right">
+                            <path d="M0.773919983,0.0060021544 C0.837078504,0.0060021544 0.900237025,0.0289771359 0.950085279,0.0746660199 L7.2059107,5.81371199 C7.25993472,5.86331706 7.29047004,5.93302522 7.29047004,6.00638854 C7.29047004,6.07922968 7.25993472,6.14919894 7.2059107,6.19854292 L0.950085279,11.93785 C0.844125116,12.0344493 0.679182201,12.0276612 0.581834563,11.9219241 C0.484747911,11.8154038 0.491794523,11.6504016 0.597754686,11.553019 L6.64400865,6.00638854 L0.597754686,0.459235881 C0.491794523,0.362114368 0.484747911,0.197112228 0.581834563,0.0905918591 C0.633248731,0.0347208814 0.70371485,0.0060021544 0.773919983,0.0060021544" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

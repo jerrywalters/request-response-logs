@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="13px" height="8px" viewBox="0 0 13 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow-right" fill="#FFFFFF">
+            <g id="Inventory">
+                <g id="Icons">
+                    <g id="outline">
+                        <g id="icons/stroked/arrow-right">
+                            <path d="M3.95008528,-1.92533398 L10.2059107,3.81371199 C10.2599347,3.86331706 10.29047,3.93302522 10.29047,4.00638854 C10.29047,4.07922968 10.2599347,4.14919894 10.2059107,4.19854292 L3.95008528,9.93784996 C3.84412512,10.0344493 3.6791822,10.0276612 3.58183456,9.9219241 C3.48474791,9.81540376 3.49179452,9.6504016 3.59775469,9.55301899 L9.64400865,4.00638854 L3.59775469,-1.54076412 C3.49179452,-1.63788563 3.48474791,-1.80288777 3.58183456,-1.90940814 C3.63324873,-1.96527912 3.70371485,-1.99399785 3.77391998,-1.99399785 C3.8370785,-1.99399785 3.90023703,-1.97102286 3.95008528,-1.92533398 Z" id="Shape" transform="translate(6.901939, 4.006002) rotate(-270.000000) translate(-6.901939, -4.006002) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
