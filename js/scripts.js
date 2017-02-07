@@ -6,7 +6,7 @@ $(function() {
     $('.filter__toggle').click(function() {
       $('.filter-content').toggleClass('filter-content--hidden');
       if (  $( this ).children().css( "transform" ) == 'none' ){
-        $(this).children().css("transform","rotate(270deg)");
+        $(this).children().css("transform","rotate(90deg)");
       } else {
         $(this).children().css("transform","" );
      }

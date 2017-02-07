@@ -62,8 +62,14 @@ header {
 
 /* Account */
 .account-container {
-  margin: 0 60px;
+  margin: 0;
 }
+@media screen and (min-width: 1200px){ 
+	.account-container {
+		margin: 0 60px;
+	}
+}
+
 @media screen and (min-width: 1200px){
 	.account-container {
 	  display: flex;
@@ -144,26 +150,38 @@ header {
 	border: none;
 	text-decoration: none;
 	background-color: #374855;
+	transform: rotate(270deg;)
 }
 
 .filter__icon {
-	content: url('img/icons/arrow-down-white.svg');
-	margin-left: .2rem;
+	content: url('img/icons/arrow-right-white.svg');
+	margin-left: .4rem;
 	color: #fff;
 }
 .filter__toggle:hover {
 	cursor: pointer;}
 
 /* somehow left 0 right 0 makes this thing the width of the relative parent element */
+
 .filter-content {
-	padding: 2rem 2rem 4rem 3rem;
+	padding: 0 2rem 4rem 3rem;
 	display: flex;
+	flex-direction: row;
 	background-color: #374855;
-	opacity: .85;
+	opacity: .95;
 	position: absolute;
 	left: 0;
 	right: 0;
 	z-index: 9;	
+	flex-wrap: wrap;
+}
+/*@media screen and (min-width: 700px){
+	.filter-content {
+		flex-direction: row;
+	}
+}*/
+.filter-group {
+	width: 50%;	
 }
 .filter-content--hidden {
 	display: none;
@@ -194,7 +212,22 @@ header {
 }
 .filter-section {
 	width: 20%;
+	margin-top: 2rem;
+	min-width: 200px;
+	max-width: 90%;
 	margin-right: 2rem;
+	overflow-y: scroll;
+}
+.filter-section--status, .filter-section--http {
+	min-width: 110px;
+	max-width: 150px;
+}
+.filter-section--endpoint {
+	width: 40%;
+	max-width: 300px;
+}
+.filter-section::-webkit-scrollbar {
+display: none;
 }
 .filter-section__header {
 	border-bottom: 1px solid #ddd;
@@ -274,6 +307,8 @@ header {
 .log-info__item--req {
 	flex-grow: 2;
 	padding-left: .5rem;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 .log-info__item--dl {
 	content: url('img/icons/download.svg');
