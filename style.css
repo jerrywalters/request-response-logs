@@ -211,20 +211,23 @@ header {
 	left: -15px;
 }
 .filter-section {
-	width: 20%;
 	margin-top: 2rem;
 	min-width: 200px;
 	max-width: 90%;
 	margin-right: 2rem;
 	overflow-y: scroll;
+	flex-grow: 1;
+}
+.filter-section--datepicker {
+	max-width: 200px;
 }
 .filter-section--status, .filter-section--http {
 	min-width: 110px;
 	max-width: 150px;
 }
 .filter-section--endpoint {
-	width: 40%;
-	max-width: 300px;
+	min-width: 200px;
+	max-width: 400px;
 }
 .filter-section::-webkit-scrollbar {
 display: none;
