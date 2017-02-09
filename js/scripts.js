@@ -61,7 +61,7 @@ $(function() {
 
 
     // datepicker
-    $( ".datepicker" ).datepicker();
+    $( ".datepicker__input" ).datepicker();
     var object = {
       obj: 'object',
       boolean: true,

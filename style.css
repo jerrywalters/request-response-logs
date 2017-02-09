@@ -212,9 +212,9 @@ header {
 }
 .filter-section {
 	margin-top: 2rem;
+	margin: 2rem 2rem 1rem 0;
 	min-width: 200px;
 	max-width: 90%;
-	margin-right: 2rem;
 	overflow-y: scroll;
 	flex-grow: 1;
 }
@@ -238,8 +238,27 @@ display: none;
 	padding-bottom: .7rem;
 	color: #fff;
 }
-.datepicker-heading {
+.datepicker__heading {
 	margin-bottom: .5rem;
+}
+.datepicker__input {
+	border-radius: 3px;
+	border: 1px solid #C8C8C8;
+}
+.datepicker__input, .timepicker__input {
+	background: transparent;
+	padding: .5em;
+	color: #fff;
+}
+.timepicker__input {
+	border: none;
+}
+.timepicker__container {
+	background: transparent;
+	border: 1px solid #C8C8C8;
+	border-radius: 3px;
+	padding: 4px;
+    max-width: 72px;
 }
 
 /* Selected Filters */

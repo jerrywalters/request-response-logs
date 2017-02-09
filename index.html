@@ -31,13 +31,30 @@
                 <h3 class="filter-section__header">Choose Dates</h3>
                 <ul class="filter-options">
                   <li class="filter-options__text">
-                    <p class="datepicker-heading">Between:</p>
-                    <input type="text" class="datepicker">
+                    <p class="datepicker__heading">From:</p>
+                    <input type="text" class="datepicker__input">
                   </li>
                   <li class="filter-options__text">
-                    <p class="datepicker-heading">and</p>
-                    <input type="text" class="datepicker">
+                    <p class="datepicker__heading">to</p>
+                    <input type="text" class="datepicker__input">
                   </li>
+                  <li class="filter-options__text">
+                    <p class="datepicker__heading">Between:</p>
+                    <div class="timepicker__container">
+                      <select class="timepicker__input">
+                        <option value="12AM">12:00AM</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="filter-options__text">
+                    <p class="datepicker__heading">and</p>
+                    <div class="timepicker__container">
+                      <select class="timepicker__input">
+                        <option class="timepicker__option" value="12AM">12:00AM</option>
+                      </select>
+                    </div>
+                  </li>
+                  
                 </ul>
               </div>
               <div class="filter-section filter-section--status">
