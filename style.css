@@ -217,6 +217,7 @@ header {
 	max-width: 90%;
 	overflow-y: scroll;
 	flex-grow: 1;
+	padding-left:1rem;
 }
 .filter-section--datepicker {
 	max-width: 200px;
